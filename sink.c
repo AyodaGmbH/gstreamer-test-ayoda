@@ -196,7 +196,7 @@ static gboolean gst_ayoda_sink_propose_allocation(GstBaseSink *basesink, GstQuer
 
     if (sink->use_dmabuf) {
         gst_object_ref (sink->pool);
-        gst_query_add_allocation_pool(query, GST_BUFFER_POOL_CAST(sink->pool), RGBAUHDBUFFER_SIZE, 5, 10);
+        gst_query_add_allocation_pool(query, GST_BUFFER_POOL_CAST(sink->pool), RGBAUHDBUFFER_SIZE, 5, 20);
     }
 
     return true;

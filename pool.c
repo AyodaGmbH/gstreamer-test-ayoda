@@ -39,7 +39,7 @@ static GstFlowReturn gst_ayoda_buffer_pool_alloc_buffer(GstBufferPool * bpool, G
     if (ret < 0)
         return GST_FLOW_ERROR;
 
-    int fd = ret;
+    int fd = info.fd;
 
     g_return_val_if_fail (fd >= 0, GST_FLOW_ERROR);
 
